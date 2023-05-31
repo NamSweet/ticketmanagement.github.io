@@ -1,0 +1,40 @@
+.App {
+}
+.sidemenu{
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 59px;
+position: absolute;
+width: 252px;
+height: 572px;
+left: 33px;
+top: 17px;
+}
+.menu{
+  background: none;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 26px;
+letter-spacing: 0.015em;
+color: #1E0D03;
+width: 252px;
+height: 56px;
+
+
+}
+.textCopyright{
+  margin-top: 400px;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 22px;
+color: #1E0D03;
+}
+.home{
+  margin-left: 400px;
+}
