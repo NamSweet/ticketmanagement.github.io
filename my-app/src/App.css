@@ -1,5 +1,4 @@
-.App {
-}
+
 .sidemenu{
   display: flex;
 flex-direction: column;
@@ -27,7 +26,8 @@ height: 56px;
 
 }
 .textCopyright{
-  margin-top: 400px;
+ 
+  margin-top: 713px;
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 400;
@@ -37,4 +37,17 @@ color: #1E0D03;
 }
 .home{
   margin-left: 400px;
+}
+.bodyhome{
+  position: absolute;
+width: 1567px;
+height: 963px;
+left: 321px;
+top: 85px;
+background: #FFFFFF;
+border-radius: 24px; 
+}
+.group1{
+  margin-left: 24px;
+  margin-top: 24px;
 }

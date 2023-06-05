@@ -1,11 +1,15 @@
 import React from 'react';
 import SideMenu from '../../component/Menubar/menubar';
+import './App.css';
+
+
 
 function Home() {
   return(
 <div>
     <SideMenu/>
-    <span className='home'> hello</span>
+  <div className='bodyhome'>
+  </div>
     </div>
   )
 }
