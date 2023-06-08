@@ -1,4 +1,3 @@
-import '../css/Dashboard.css'
 import ApexCharts from 'apexcharts'
 import React from 'react'
 const WaveChart = (props: any) => {
@@ -30,8 +29,10 @@ const WaveChart = (props: any) => {
         xaxis: {
           categories: props.categories,
         },
+        colors:['#fe9c44', '#E91E63', '#9C27B0'],
         fill: {
-          type: 'gradient',
+          colors: ['#fe9c44', '#E91E63', '#9C27B0'],
+          type: 'gradient', 
           gradient: {
             shadeIntensity: 1,
             opacityFrom: 0.7,
@@ -50,7 +51,7 @@ const WaveChart = (props: any) => {
     };
   }, []);
 
-  return <div className='' id="wave-chart" />;
+  return <div id="wave-chart" />;
 };
 
 
