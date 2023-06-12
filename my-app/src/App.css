@@ -77,10 +77,26 @@ line-height: 20px;
 color: #1E0D03;
 background: #EDE6E6;
 }
+.searchticker .ant-input{
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1E0D03;
+  background: #EDE6E6;
+}
 #header > .search {
   background: #EDE6E6;
   border: none;
   border-radius: 12px;
+  
+}
+.searchticker{
+  background: #EDE6E6;
+  border: none;
+  border-radius: 12px;
+  
 }
 #header .header-items {
   display: flex;
@@ -104,4 +120,45 @@ background: #EDE6E6;
   width: 44px;
 height: 20px;
 border-radius: 4px;
+}
+.filter{
+width: 127px;
+height: 48px;
+border: 1px solid #FF993C;
+border-radius: 6px;
+margin-left: 755px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 26px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+color: #FF993C;
+
+
+}
+.group2{
+ display: flex;
+ flex-wrap:wrap; 
+}
+.exportfile{
+  width: 127px;
+height: 48px;
+border: 1px solid #FF993C;
+border-radius: 6px;
+margin-left: 10px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 26px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+color: #FF993C;
+
 }
