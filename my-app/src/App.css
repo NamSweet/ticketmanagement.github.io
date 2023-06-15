@@ -3,7 +3,6 @@
   height: 1080px;
   width: 1920px;
   background: #F9F6F4;
-border-radius: 24px;
 position: relative;
 display: flex;
 }
@@ -53,6 +52,7 @@ gap: 20px;
 padding: 24px;
   background: #ffffff;
   border-radius: 24px;
+  height: 963px;
 }
 .logo{
   width: 133px;
@@ -162,3 +162,38 @@ align-items: center;
 color: #FF993C;
 
 }
+.datatableticketmgt{
+  margin-top: 31px;
+  width: 1519px;
+  height: 624px;
+  font-family: 'Montserrat';
+font-style: normal;
+font-size: 16px;
+line-height: 26px;
+  
+}
+.used{
+color: #919DBA
+}
+
+.unused {
+  color: #03AC00
+}
+
+.expired {
+color: #FD5959;
+}
+
+.text-table {
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+}
+
+.mantine-kyrw5a tr {
+  background: #F1F4F8;
+}
+.mantine-pe6iht[data-striped] tbody tr:nth-of-type(odd) {
+  background: #FFFFFF;}
