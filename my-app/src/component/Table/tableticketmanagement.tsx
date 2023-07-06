@@ -1,30 +1,41 @@
-import { Badge, Tag } from 'antd';
+import { Badge, MenuProps, Tag, Typography } from 'antd';
 import { DataTable } from 'mantine-datatable';
 import { useEffect, useState } from 'react';
-import { BsThreeDotsVertical } from 'react-icons/bs';
+import ModalTicket from '../../pages/ticketmanagement/ModalTicket';
+import { getList } from '../../firebase/crud';
+import DropdownOption from '../../pages/ticketmanagement/DropdownOption';
+import dayjs from 'dayjs';
 
 const PAGE_SIZES = [18, 12];
-
-const TicketManagement = [ { stt: '1', bokingcode: 'ALTFGHJU', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '2', bokingcode: 'ALTQTYJH', sove: "123456789034",tinhtrang:'Chưa sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'-'},
-  {  stt: '3', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '4', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Hết hạn',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'-'},
-  {  stt: '5', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Hết hạn',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'-'},
-  {  stt: '6', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '7', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '8', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '9', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '10', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '11', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},
-  {  stt: '12', bokingcode: 'ALTIOJNB', sove: "123456789034",tinhtrang:'Đã sử dụng',ngaysudung:'14/04/2021',ngayxuatve:'14/04/2021',congcheckin:'Cổng 1'},]
   
-
+export  interface TicketManagement {
+    bookingCode: string;
+    gate: string;
+    releaseDate: string;
+    status: string;
+    ticketNumber:string;
+    useDate:string;
+  }
 
 export const TableTicketManagement = () => {
+  const [ticket, setTicket] = useState<TicketManagement[]>([])
   const [pageSize, setPageSize] = useState(PAGE_SIZES[1]);
   const [page, setPage] = useState(1);
-  const [records, setRecords] = useState(TicketManagement.slice(0, pageSize));
-  
+  const [records, setRecords] = useState(ticket.slice(0, pageSize));
+  const startingNumber = (page - 1) * pageSize + 1;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const ticketList = await getList<TicketManagement>({ collectionName: 'tickets' });
+        setTicket(ticketList);
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+      }
+    };
+    fetchData();
+  }, []);
+
   useEffect(() => {
     setPage(1);
   }, [pageSize]);
@@ -32,55 +43,70 @@ export const TableTicketManagement = () => {
   useEffect(() => {
     const from = (page - 1) * pageSize;
     const to = from + pageSize;
-    setRecords(TicketManagement.slice(from, to));
-  }, [page, pageSize]);
-
+    setRecords(ticket.slice(from, to));
+  }, [page, pageSize, ticket]);
   
   return (
+    <>
     <DataTable className='datatableticketmgt'
       withBorder
       borderRadius="sm"
       striped
-      records={records}
+      records={records.map((record, index) => ({ ...record, stt: startingNumber + index }))}
       columns={[
         {
           accessor: 'stt',
           title: 'STT',
           textAlignment: 'left',
         },
-        { accessor: 'bokingcode',
+        { accessor: 'bookingCode',
         title:'Booking code' }
         ,
-        { accessor: 'sove',
+        { accessor: 'ticketNumber',
         title: 'Số vé', }
         ,
-        { accessor: 'tinhtrang',
+        { accessor: 'status',
         title: 'Tình trạng sử dụng',
-        render: ({tinhtrang}) => (
-          <Tag bordered color={tinhtrang === "Đã sử dụng" ? "default" : tinhtrang === "Hết hạn" ? "error" : tinhtrang === "Chưa sử dụng" ? "success" : undefined }><p className={`text-table ${tinhtrang === "Đã sử dụng" ? `used` : tinhtrang === "Hết hạn" ? `expired` : tinhtrang === "Chưa sử dụng" ? `unused` : null }`}><Badge color={tinhtrang === "Đã sử dụng" ? "rgba(145, 157, 186, 1)" : tinhtrang === "Hết hạn" ? "rgba(253, 89, 89, 1)" : tinhtrang === "Chưa sử dụng" ? "rgba(3, 172, 0, 1)" : undefined }/>{" "}{tinhtrang}</p></Tag>
+        render: ({status}) => (
+          <Tag bordered color={status === "Đã sử dụng" ? "default" : status === "Hết hạn" ? "error" : status === "Chưa sử dụng" ? "success" : undefined }><p className={`text-table ${status === "Đã sử dụng" ? `used` : status === "Hết hạn" ? `expired` : status === "Chưa sử dụng" ? `unused` : null }`}><Badge color={status === "Đã sử dụng" ? "rgba(145, 157, 186, 1)" : status === "Hết hạn" ? "rgba(253, 89, 89, 1)" : status === "Chưa sử dụng" ? "rgba(3, 172, 0, 1)" : undefined }/>{" "}{status}</p></Tag>
    ) }
         ,
-        { accessor: 'ngaysudung',
-        title: 'Ngày sử dụng', }
-        ,
-        { accessor: 'ngayxuatve',
-        title: 'Ngày xuất vé', }
-        ,
-        { accessor: 'congcheckin',
-        title: 'Cổng check - in', }
+        { accessor: 'useDate',
+        title: 'Ngày sử dụng', render: ({useDate}) => (
+          <span>{dayjs(useDate).format("DD/MM/YYYY")}</span>
+        )},
+        { accessor: 'releaseDate',
+        title: 'Ngày xuất vé', render: ({releaseDate}) => (
+          <span>{dayjs(releaseDate).format("DD/MM/YYYY")}</span>
+        )},
+        { accessor: 'gate',
+        title: 'Cổng check - in',
+        render: ({gate}) => (
+          <>{gate === "" ? <span style={{textAlign: "center",
+            display: "inline-block",
+            width: "20%"}}>-</span> :  <span>{gate}</span>}</>
+        )}
         ,
         { accessor: ' ',
-        render: ({tinhtrang}) => (
-          <>{tinhtrang === "Chưa sử dụng" ? (<BsThreeDotsVertical/>) : null}</>
-    ) }
+        render: (record) => (
+          <>
+          {record.status === "Chưa sử dụng" ? (
+            <DropdownOption data={record}/>
+          ) : null}
+          
+        </>
+         ),
+        },
       ]}
       
-      totalRecords={TicketManagement.length}
+      totalRecords={ticket.length}
       recordsPerPage={pageSize}
       page={page}
       onPageChange={(p) => setPage(p)}
       recordsPerPageOptions={PAGE_SIZES}
       onRecordsPerPageChange={setPageSize}
     />
+    </>
+    
   );
 }

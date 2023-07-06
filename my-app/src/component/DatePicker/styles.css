@@ -1,0 +1,469 @@
+.date-picker {
+    width: 155px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #e6e0e0;
+  }
+  
+  .date-picker-custom {
+    width: 143px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #a5a8b1;
+  }
+  
+  .date-picker .ant-picker-suffix .anticon-calendar {
+    color: #ff993c;
+  }
+  
+  .date-picker-custom .ant-picker-suffix .anticon-calendar {
+    color: #ff993c;
+    font-size: 20px;
+  }
+  
+  .ant-picker-dropdown
+    .ant-picker-cell-in-view.ant-picker-cell-selected
+    .ant-picker-cell-inner,
+  .ant-picker-dropdown
+    .ant-picker-week-panel-row-selected
+    td.ant-picker-cell:before {
+    background: #ffba7b;
+  }
+  
+  .ant-picker-dropdown
+    .ant-picker-cell-in-view.ant-picker-cell-today
+    .ant-picker-cell-inner::before {
+    border: none;
+  }
+  
+  .ant-picker-dropdown .ant-picker-cell .ant-picker-cell-inner {
+    border-radius: 50%;
+  }
+  
+  .ant-picker-dropdown .ant-picker-content th,
+  .ant-picker-dropdown .ant-picker-content td,
+  .ant-picker .ant-picker-input > input {
+    font-family: "Montserrat";
+    font-style: normal;
+  }
+  
+  .ant-picker-dropdown .ant-picker-content th {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #c55e00;
+  }
+  
+  .ant-picker-dropdown .ant-picker-content td {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .ant-picker-dropdown .ant-picker-footer-extra {
+    display: inline-flex;
+  }
+  
+  .ant-picker-dropdown .ant-picker-cell-in-view {
+    color: #23221f;
+  }
+  
+  .date-picker.ant-picker .ant-picker-input > input {
+    color: #1e0d03;
+    opacity: 0.78;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .date-picker-custom.ant-picker .ant-picker-input > input {
+    color: #1e0d03;
+    opacity: 0.7;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .gray-brown {
+    color: #1e0d03;
+  }
+  
+  .grey-5 {
+    color: #919dba;
+  }
+  
+  .white {
+    color: #ffffff;
+  }
+  
+  .yellow-1 {
+    color: #ff993c;
+  }
+  
+  .yellow-3 {
+    color: #ffba7b;
+  }
+  
+  .promomote {
+    color: #03ac00;
+  }
+  
+  .end {
+    color: #fd5959;
+  }
+  
+  /* Background color styles*/
+  .bg-white {
+    background-color: #ffffff;
+  }
+  
+  .bg-yellow-3 {
+    background: #ffba7b;
+  }
+  
+  .bg-grey-2 {
+    background: #f1f4f8;
+  }
+  
+  .bg-grey-4 {
+    background: #f7f8fb;
+  }
+  
+  .bg-yellow-1 {
+    background: #ff993c;
+  }
+  
+  /* Text styles */
+  .text-normal {
+    font-family: "Montserrat";
+    font-style: normal;
+  }
+  
+  .text-italic {
+    font-family: "Montserrat";
+    font-style: italic;
+  }
+  
+  .regular-14 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .bold-36 {
+    font-weight: 700 !important;
+    font-size: 36px !important;
+    line-height: 54px !important;
+  }
+  
+  .bold-24 {
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+  
+  .bold-18 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  
+  .medium-18 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  
+  .medium-16 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .medium-14 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .medium-12 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  .italic-16 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .italic-medium-14 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .italic-12 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  .semibold-18 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  
+  .semibold-16 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  /* opacity */
+  .opacity-4 {
+    opacity: 0.4;
+  }
+  
+  .opacity-5 {
+    opacity: 0.5;
+  }
+  
+  .opacity-6 {
+    opacity: 0.6;
+  }
+  
+  .opacity-7 {
+    opacity: 0.7;
+  }
+  
+  .opacity-8 {
+    opacity: 0.8;
+  }
+  
+  .opacity {
+    opacity: 1;
+  }
+  
+  /* flex */
+  .flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* button */
+  .button-no-background.ant-btn.ant-btn-lg {
+    padding: 4px 12px;
+    background: none;
+    border: 1px solid #ff993c;
+    border-radius: 6px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-no-background.ant-btn-primary:not(:disabled):hover {
+    color: #ffb800;
+    opacity: 0.7;
+    border-color: #ffb800;
+    background-color: inherit;
+  }
+  
+  .ant-btn-primary:not(:disabled):hover {
+    background: #ffb800;
+    opacity: 0.7;
+  }
+  
+  /* dropdown */
+  .ant-dropdown .ant-dropdown-arrow:before,
+  .ant-dropdown .ant-dropdown-menu {
+    background: #ffd2a8;
+  }
+  
+  /* icon */
+  .i-search {
+    font-size: 24px;
+    color: #1e0d03;
+  }
+  
+  .i-filter {
+    font-size: 24px;
+    color: #ff993c;
+  }
+  
+  /* Search */
+  .search-ticket {
+    background: #f7f7f8;
+    width: 446px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  .search-ticket .ant-input {
+    background-color: #f7f7f8;
+    font-style: inherit;
+  }
+  .input-modal {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #a5a8b1;
+  }
+  
+  .time {
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid #a5a8b1;
+  }
+  
+  .input-price {
+    background: #f1f4f8;
+    border: none;
+  }
+  
+  /* antd */
+  .modal-service > .ant-modal-content > .ant-modal-footer,
+  .modal-service > .ant-modal-content > .ant-modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .time.ant-picker .ant-picker-suffix {
+    color: #ff993c;
+    font-size: 20px;
+  }
+  
+  .time.ant-picker .ant-picker-input > input,
+  .select-status .ant-select-selector {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #1e0d03;
+    opacity: 0.7;
+  }
+  
+  .checkbox .ant-checkbox .ant-checkbox-inner {
+    border: 1px solid #27aef9;
+  }
+  
+  .select-status.ant-select:not(.ant-select-customize-input)
+    .ant-select-selector {
+    border: 1px solid #a5a8b1;
+  }
+  
+  .select-status.ant-select-single:not(.ant-select-customize-input)
+    .ant-select-selector {
+    width: 176px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+  }
+  
+  .select-status.ant-select .ant-select-arrow {
+    color: #ff993c;
+    font-size: 14px;
+  }
+  
+  .table-service .ant-table-row .ant-table-cell:nth-child(4),
+  .table-service .ant-table-row .ant-table-cell:nth-child(5),
+  .table-service .ant-table-row .ant-table-cell:nth-child(6) {
+    text-align: center;
+  }
+
+.space-price .checkbox{
+margin-top: 0;
+}
+.i-more {
+  font-size: 24px;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.i-more:hover {
+  background-color: rgba(233, 228, 228, 0.84);
+  cursor: pointer;
+}
+
+.i-more:active {
+  background-color: gainsboro;
+}
+
+.modal-ticket .ant-modal-body {
+  width: 100%;
+}
+
+.modal-ticket .modal-container {
+  margin: 30px 0 34px 0;
+}
+
+.modal-ticket .modal-container-filter {
+  margin-top: 26px;
+}
+
+#date-picker-custom {
+  width: 143px;
+  border-radius: 8px;
+  border: 1px solid #a5a8b1;
+}
+
+/* antd */
+.search-ticket .ant-input {
+  background-color: #f7f7f8;
+  font-style: inherit;
+}
+
+.modal-ticket > .ant-modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px 32px;
+}
+
+.modal-ticket.modal-filter > .ant-modal-content {
+  width: 634px;
+}
+
+.modal-container-filter > .ant-space .ant-space-item:last-child {
+  display: flex;
+  justify-content: center;
+}
+.checkin{
+  color: var(--end, #FD5959);
+
+/* 14 italic medium */
+font-family: Montserrat;
+font-size: 14px;
+font-style: italic;
+font-weight: 500;
+line-height: 22px;display: flex;
+width: 99px;
+height: 16px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+}
+.uncheckin{
+  color: var(--grey-4, #A5A8B1);
+
+  /* 14 italic medium */
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 22px;
+}

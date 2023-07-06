@@ -143,6 +143,7 @@ color: #FF993C;
 .group2{
  display: flex;
  flex-wrap:wrap; 
+ 
 }
 .exportfile{
   width: 127px;
@@ -197,3 +198,177 @@ line-height: 15px;
 }
 .mantine-pe6iht[data-striped] tbody tr:nth-of-type(odd) {
   background: #FFFFFF;}
+  .group3{
+    padding: 24px 24px 0;
+    width: 1097px;
+    height: 963px;
+    border-radius: 24px;
+    background: #FFF;
+  }
+  .btnticketcheck{
+    display: inline-flex;
+height: 48px;
+padding: 11px 24px;
+margin-left: 492px;
+border-radius: 8px;
+background: var(--yellow-1, #FF993C);
+border: none;
+color: #FFF;
+font-size: 18px;
+font-family: Montserrat;
+font-weight: 700;
+line-height: 26px;
+  }
+.textticketfilter{
+  color: var(--text, #1E0D03);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+
+  }
+.ticketfilter{
+  width: 446px;
+margin-left: 24px;
+border-radius: 24px;
+background: #FFF;
+
+}
+.group4{
+  display: flex;
+    flex-direction:row;
+}
+.groupticketfilter{
+  margin-left: 24px;
+  margin-top: 22px;
+}
+.textstatus{
+  font-size: 16px;
+margin-top: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+}
+.checkbox-container {
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 8px;
+  margin-bottom: 16px;
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkbox-button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--checkbox, #27AEF9);
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: transparent;
+  padding: 3px; 
+  margin: 2px;
+}
+
+.checkbox-container input:checked + .checkbox-button {
+  background-color: #27AEF9;
+}
+.groupcheckbox{
+  display: flex;
+  flex-direction:row;
+  gap:26px;
+}
+.checkbox{
+  margin-top: 35px;
+}
+.texttickettype{
+  color: var(--text, #1E0D03);
+/* 16 semibold */
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 26px;
+}
+.texttickettype2{
+  color: var(--text, #1E0D03);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 124px;
+}
+.grouptimecheckbox{
+  margin-top: 9px;
+}
+.texttime-ticketfilter{
+  color: var(--text, #1E0D03);
+  /* 16 semibold */
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+}
+.timeticketfilter{
+  margin-top: 24px;
+
+}
+.btnticketfilter{
+width: 160px;
+height: 48px;
+border-radius: 8px;
+border: 1px solid var(--yellow-1, #FF993C);
+color: var(--yellow-1, #FF993C);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+background: none;
+}
+.groupbtnticketfilter{
+  margin-top: 32px;
+  margin-left: 95px;
+}
+.ant-menu .ant-menu-submenu-arrow {
+  display: none;
+}
+.btnExportfile{
+height: 48px;
+padding: 11px 24px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 8px;
+border: 1px solid var(--yellow-1, #FF993C);
+background: none;
+color: var(--yellow-1, #FF993C);
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+margin-right: 24px;
+}
+.btnextrapack{
+  height: 48px;
+  padding: 11px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid var(--yellow-1, #FF993C);
+  background: #FF993C;
+  color: var(--yellow-1, #ffffff);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+
+}
+.groupbtnsetting{
+  width: 100%;
+display: flex;
+justify-content: space-between;
+}

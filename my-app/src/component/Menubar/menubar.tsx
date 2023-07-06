@@ -14,7 +14,7 @@ function SideMenu(){
       <div className="sidemenu">
         <div>
           <img className="logo" src={LogoImage} alt="Insight"></img>
-        <Menu className="menu"
+        <Menu mode='inline' className="menu"
               onClick={(item) =>{
                 navigate(item.key);
               }}
@@ -34,13 +34,18 @@ function SideMenu(){
                 label: <span style={{color: "#7E7D88"}}>Đối soát vé</span>,
                 key:'/Checktikets',
                 icon: <TbFileInvoice/>
-              
+                
               },
               {
                 label:  <span style={{color: "#7E7D88"}}>Cài đặt</span>,
-                key:'/Setting',
-                icon: <AiOutlineSetting/>
-              
+                key:'setting',
+                icon: <AiOutlineSetting/>,            
+                children: [
+                  {
+                    label: <span style={{color: "#7E7D88"}}>Gói dịch vụ</span>,
+                    key:'/Setting',
+                  },
+                ]
               }
               
         ]}

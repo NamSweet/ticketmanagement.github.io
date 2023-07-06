@@ -11,6 +11,8 @@
     "@types/node": "^16.18.34",
     "antd": "^5.5.2",
     "apexcharts": "^3.40.0",
+    "dayjs": "^1.11.9",
+    "firebase": "^9.23.0",
     "mantine-datatable": "^2.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
